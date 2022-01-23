@@ -129,6 +129,8 @@ def create_room(request):
     if request.method == 'POST':
         form = RoomForm(request.POST)
         if form.is_valid():
+            room = form.save(commit=False)
+            room.host = request.user
             form.save()
             return redirect('home')
 
@@ -177,6 +179,6 @@ def delete_message(request, pk):
 
     if request.method == 'POST':
         message.delete()
-        return redirect('home')
+        return redirect('room', pk=message.room.id)
 
     return render(request, 'base/delete.html', {'obj': message})

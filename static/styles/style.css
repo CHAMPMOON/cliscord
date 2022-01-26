@@ -295,7 +295,7 @@ a {
 
 .header__search > label {
   background-color: var(--color-dark-medium);
-  padding: 1.3rem rem;
+  padding: 1.3rem 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -310,7 +310,7 @@ a {
 }
 
 .header__search input {
-  width: 20rem;
+  width: 30rem;
   background: transparent;
   border: none;
   outline: none;

@@ -13,6 +13,7 @@
       </div>
       <div class="layout__body">
         <form class="form" action="" method="POST">
+          {% csrf_token %}
           <div class="form__group form__group">
             <label for="room_name">Username</label>
             <input id="username" name="username" type="text" placeholder="" />
